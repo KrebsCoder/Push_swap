@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/02/27 01:12:11 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/02/27 02:11:02 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 # define ERROR 1
 # define SUCCESS 0
+# define MAXINT 2147483647
+# define MININT -2147483648
 
 typedef struct s_data
 {
@@ -43,6 +45,7 @@ void	rra(void);
 void	rrb(void);
 void	rrr(void);
 
-int	check(t_data *data, int argc, char *argv[]);
+int	check(int argc, char *argv[]);
+int	init(t_data *data, int argc, char *argv[]);
 
 #endif

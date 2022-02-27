@@ -6,13 +6,13 @@
 #    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/26 16:58:00 by gcosta-d          #+#    #+#              #
-#    Updated: 2022/02/27 01:12:25 by gcosta-d         ###   ########.fr        #
+#    Updated: 2022/02/27 02:11:28 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g3
 
 CC = gcc
 
