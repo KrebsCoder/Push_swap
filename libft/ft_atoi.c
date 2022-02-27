@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:34:18 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/09/14 09:59:56 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/02/27 01:41:02 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
  * if other ascii thing was encountered, the function stops
  * and return an integer transformed.*/
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
-	int	negative;
-	int	i;
-	int	nbr;
+	int		negative;
+	int		i;
+	long	nbr;
 
 	negative = 1;
 	i = 0;
