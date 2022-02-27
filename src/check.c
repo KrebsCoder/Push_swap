@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 23:47:33 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/02/27 01:12:17 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/02/27 01:41:37 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,18 @@
 #include "../include/push_swap.h"
 
 static int	ft_strdigit(char *str);
+static int	is_max_int(char *str);
 
-int	check(t_data *data, int argc, char *argv[])
+int	check(int argc, char *argv[])
 {
 	int	i;
-	if (argc < 3)
-		return (0);
-	data->qnt_int = argc;
 
+	if (argc < 3)
+		return (ERROR);
 	i = 1;
 	while (argv[i])
 	{
-
-		if (ft_strdigit(argv[i]) == 0)
+		if (ft_strdigit(argv[i]) || is_max_int(argv[i]))
 		{
 			write(2, "Error\n", 6);
 			return (ERROR);
@@ -61,5 +60,15 @@ static int	ft_strdigit(char *str)
 		}
 		i++;
 	}
+	return (SUCCESS);
+}
+
+static int	is_max_int(char *str)
+{
+	long	atoi;
+
+	atoi = ft_atoi(str);
+	if (atoi > MAXINT)
+		return (ERROR);
 	return (SUCCESS);
 }
