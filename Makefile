@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/26 16:58:00 by gcosta-d          #+#    #+#              #
-#    Updated: 2022/02/27 02:11:28 by gcosta-d         ###   ########.fr        #
+#    Updated: 2022/03/04 19:23:28 by lkrebs-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,10 @@ RULES_FILES = pa.c pb.c ra.c rb.c rr.c rra.c rrb.c rrr.c sa.c sb.c ss.c
 RULES = $(addprefix $(RULES_PATH),$(RULES_FILES))
 
 SRC_PATH = ./src/
-SRC_FILES = check.c init.c main.c
+SRC_FILES = check.c \
+			init.c \
+			main.c \
+			utils.c
 SRC = $(addprefix $(SRC_PATH),$(SRC_FILES))
 
 OBJ_PATH = ./objs/
@@ -40,7 +43,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ_PATH) $(SRC_OBJ) $(RULES_OBJ)
 	@$(MAKE) --no-print-directory -C ./libft
-	@$(CC) $(FLAGS) $(SRC_OBJ) $(RULES_OBJ) ./libft/libft.a -fsanitize=address -o $(NAME)
+	@$(CC) $(FLAGS) $(SRC_OBJ) $(RULES_OBJ) ./libft/libft.a -o $(NAME)
 	@echo -n █
 	@echo " 100% complete"
 
