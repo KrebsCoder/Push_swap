@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/04 19:12:32 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/04 19:19:05 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ int	ft_strdigit(char *str)
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
 		{
-			return (TRUE);
+			return (FALSE);
 			break ;
 		}
 		i++;
 	}
-	return (FALSE);
+	return (TRUE);
 }
 
 int	is_max_int(char *str)
@@ -35,6 +35,6 @@ int	is_max_int(char *str)
 
 	atoi = ft_atoi(str);
 	if (atoi > MAXINT)
-		return (TRUE);
-	return (FALSE);
+		return (FALSE);
+	return (TRUE);
 }

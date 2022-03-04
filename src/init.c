@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:37:26 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/04 17:20:02 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/04 19:22:12 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	init(t_data *data, int argc, char *argv[])
 
 	data->qnt_int = argc;
 	data->stack_a = (int *)malloc(argc * sizeof(int));
-	if (data->stack_a)
-		return (ERROR);
+	if (!data->stack_a)
+		return (FALSE);
 	data->stack_a[argc] = '\0';
 	i = 0;
 	while (i < argc)
@@ -29,5 +29,5 @@ int	init(t_data *data, int argc, char *argv[])
 		data->stack_a[i] = number;
 		i++;
 	}
-	return (SUCCESS);
+	return (TRUE);
 }
