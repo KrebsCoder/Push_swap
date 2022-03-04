@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/02/27 02:11:02 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/04 19:12:42 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 # include "../libft/libft.h"
 # include <unistd.h>
 
-# define ERROR 1
-# define SUCCESS 0
+# define TRUE 1
+# define FALSE 0
 # define MAXINT 2147483647
 # define MININT -2147483648
 
@@ -47,5 +47,7 @@ void	rrr(void);
 
 int	check(int argc, char *argv[]);
 int	init(t_data *data, int argc, char *argv[]);
+int	ft_strdigit(char *str);
+int	is_max_int(char *str);
 
 #endif
