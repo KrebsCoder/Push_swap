@@ -6,24 +6,30 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:26:20 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 01:09:19 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/08 01:50:18 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	sa(void)
+void	sa(t_data *data)
 {
-	int arr1[4] = {8, 4, 7, 2};
-	int temp;
+	int	temp;
+	int	len;
 
-	temp = arr1[0];
-	arr1[0] = arr1[1];
-	arr1[1] = temp;
+	len = data->qnt_int;
+	printf("sizeof array: %d\n", len);
 
-	int len = sizeof(arr1)/sizeof(arr1[0]);
+	if (len <= 1)
+		return ;
+	temp = data->stack_a[0];
+	data->stack_a[0] = data->stack_a[1];
+	data->stack_a[1] = temp;
+	write(1, "sa\n", 3);
+
+	/* for temporario */
 	for (int i = 0; i < len; i++)
-		printf("%d", arr1[i]);
+		printf("%d", data->stack_a[i]);
 	printf("\n");
 }
 
