@@ -6,7 +6,7 @@
 #    By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/26 16:58:00 by gcosta-d          #+#    #+#              #
-#    Updated: 2022/03/08 02:50:41 by lkrebs-l         ###   ########.fr        #
+#    Updated: 2022/03/08 02:52:17 by lkrebs-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC_PATH = ./src/
 SRC_FILES = check.c \
 			init.c \
 			main.c \
+			radix.c \
 			set_sort.c \
 			utils.c 
 SRC = $(addprefix $(SRC_PATH),$(SRC_FILES))
