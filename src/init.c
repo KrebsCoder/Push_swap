@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:37:26 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/04 19:51:44 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/08 02:46:44 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	init(t_data *data, int argc, char *argv[])
 {
 	int	i;
 
-	data->qnt_int = argc;
 	data->stack_a = (int *)malloc(argc * sizeof(int));
 	if (!data->stack_a)
 		return (FALSE);
