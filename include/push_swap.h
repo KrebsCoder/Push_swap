@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 02:55:14 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/08 03:30:50 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ typedef struct s_data
 	int	*stack_a;
 	int	*stack_b;
 	int	qnt_int;
-} t_data;
-
+}	t_data;
 
 /* ==== rules functions ==== */
 void	pa(void);
@@ -45,11 +44,12 @@ void	rra(void);
 void	rrb(void);
 void	rrr(void);
 
-int	check(int argc, char *argv[]);
-int	init(t_data *data, int argc, char *argv[]);
-int	ft_strdigit(char *str);
-int	is_max_int(char *str);
-int	radix(t_data *data);
-int	init_sort(t_data *data, int argc, char *argv[]);
+int		check(int argc, char *argv[]);
+int		init(t_data *data, int argc, char *argv[]);
+int		ft_strdigit(char *str);
+int		is_max_int(char *str);
+int		radix(t_data *data);
+int		init_sort(t_data *data, int argc, char *argv[]);
+int		*shift(int array[]);
 
 #endif
