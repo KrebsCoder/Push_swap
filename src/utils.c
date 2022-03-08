@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/08 02:11:45 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/08 03:27:55 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,23 @@ int	array_len(int array[])
 	while (array[i])
 		i++;
 	return (i);
+}
+
+int	*shift(int array[])
+{
+	int	*aux_array;
+	int	i;
+	int	len;
+
+	len = array_len(array);
+	ft_memcpy(aux_array, array, len);
+	free(array);
+	array = malloc(sizeof(int) * (len - 1));
+	i = 0;
+	while (i < len)
+	{
+		array[i] = aux_array[i + 1];
+		i++;
+	}
+	return (array);
 }
