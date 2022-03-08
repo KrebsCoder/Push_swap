@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:04:07 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 01:48:17 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/08 02:38:20 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@ int	main(int argc, char *argv[])
 	if (!check(argc, argv) || !init(&data, argc, argv))
 		return (EXIT_FAILURE);
 	print_stack(argc, &data);
-	sa(&data);
-	free(data.stack_a);
-	return (EXIT_SUCCESS);
+	return (set_sort(&data, argc, argv));
 }
