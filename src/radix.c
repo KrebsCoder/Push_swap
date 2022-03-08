@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 16:37:26 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 02:46:44 by gcosta-d         ###   ########.fr       */
+/*   Created: 2022/03/08 02:27:30 by gcosta-d          #+#    #+#             */
+/*   Updated: 2022/03/08 04:01:39 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	init(t_data *data, int argc, char *argv[])
+int	radix(t_data *data)
 {
-	int	i;
-
-	data->stack_a = (int *)malloc(argc * sizeof(int));
-	if (!data->stack_a)
-		return (FALSE);
-	i = 0;
-	while (i < argc)
-	{
-		data->stack_a[i] = ft_atoi(argv[i + 1]);
-		i++;
-	}
-	return (TRUE);
+	data->qnt_int = 2;
+	return (EXIT_SUCCESS);
 }
