@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:27:30 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 02:29:25 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/08 04:01:39 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 int	radix(t_data *data)
 {
+	data->qnt_int = 2;
 	return (EXIT_SUCCESS);
 }
