@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   set_sort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 01:04:07 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 02:55:22 by lkrebs-l         ###   ########.fr       */
+/*   Created: 2022/03/08 02:36:40 by gcosta-d          #+#    #+#             */
+/*   Updated: 2022/03/08 02:54:37 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	print_stack(int argc, t_data *data)
+int	init_sort(t_data *data, int argc, char *argv[])
 {
-	for (int i = 0; i < argc - 1; i++)
-		printf("%d  %d\n", data->stack_a[i], data->stack_b[i]);
-	printf("_  _\n");
-	printf("a  b\n");
-}
-
-int	main(int argc, char *argv[])
-{
-	t_data	data;
-
-	print_stack(argc, &data);
-	return (init_sort(&data, argc, argv));
+	if (!check(argc, argv) || !init(&data, argc, argv))
+		return (EXIT_FAILURE);
+	if (argc >= 6)
+		return (radix(data));
+	return (EXIT_SUCCESS);
 }
