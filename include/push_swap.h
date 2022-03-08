@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 01:48:02 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/08 02:38:11 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ typedef struct s_data
 
 /* ==== rules functions ==== */
 void	pa(void);
-void	pb(void);
+void	pb(t_data *data);
 void	ra(void);
 void	rb(void);
 void	rr(void);
 void	sa(t_data *data);
-void	sb(void);
+void	sb(t_data *data);
 void	ss(void);
 void	rra(void);
 void	rrb(void);
@@ -49,5 +49,7 @@ int	check(int argc, char *argv[]);
 int	init(t_data *data, int argc, char *argv[]);
 int	ft_strdigit(char *str);
 int	is_max_int(char *str);
+int	radix(t_data *data);
+int	set_sort(t_data *data, int argc, char *argv[]);
 
 #endif
