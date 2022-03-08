@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:26:08 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 02:07:53 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/08 02:18:00 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	sb(t_data *data)
 	int	temp;
 	int	len;
 
-	len = data->qnt_int;
+	len = array_len(data->stack_b);
 	if (len <= 1)
 		return ;
 	temp = data->stack_b[0];
