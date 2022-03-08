@@ -12,7 +12,7 @@
 
 #include "../include/push_swap.h"
 
-void	pb(void)
+void	pb(t_data *data)
 {
 
 }
