@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/09 03:20:33 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/09 20:22:00 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,11 @@ int	ft_strdigit(char *str);
  */
 int	is_max_int(char *str);
 
+/**
+ * @brief This functions counts the length of an array
+ * @param array array to be counted
+ * @return a int with the length of an array
+ */
 int		array_len(int array[]);
 int		*shift(int array[]);
 void	*ft_realloc(void *ptr, size_t len);
