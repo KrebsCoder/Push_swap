@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:32:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/02/27 01:41:15 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/09 02:53:55 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+void	ft_arraycpy(int dest[], int src[], size_t len);
 
 t_list	*ft_lstnew(void	*content);
 void	ft_lstadd_front(t_list	**lst, t_list	*new);
