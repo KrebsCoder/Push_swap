@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 18:48:26 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/08 21:50:09 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,5 +129,8 @@ int	ft_strdigit(char *str);
  * @return 0 or 1
  */
 int	is_max_int(char *str);
+
+int	array_len(int array[]);
+int	*shift(int array[]);
 
 #endif
