@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/08 21:50:09 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/08 22:36:15 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	pa(void);
  * @brief Take the first element at the top of a and put it at the top of b.
 Do nothing if a is empty.
  */
-void	pb(void);
+void	pb(t_data *data);
 
 /**
  * @brief (rotate a) Shift up all elements of stack a by 1.
@@ -66,13 +66,13 @@ void	rr(void);
  * @brief Swap the first 2 elements at the top of stack a.
 Do nothing if there is only one or no elements
  */
-void	sa(void);
+void	sa(t_data *data);
 
 /**
  * @brief Swap the first 2 elements at the top of stack b.
 Do nothing if there is only one or no elements
  */
-void	sb(void);
+void	sb(t_data *data);
 
 /**
  * @brief sa and sb at the same time.
@@ -132,5 +132,6 @@ int	is_max_int(char *str);
 
 int	array_len(int array[]);
 int	*shift(int array[]);
+void	*ft_realloc(void *ptr, size_t len);
 
 #endif

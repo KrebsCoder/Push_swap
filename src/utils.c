@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/08 03:50:26 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/08 22:35:36 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,24 @@ int	*shift(int array[])
 	}
 	free(aux_array);
 	return (array);
+}
+
+void	*ft_realloc(void *ptr, size_t len)
+{
+	void	*aux;
+
+	if (!ptr)
+		return (malloc(len));
+	if (len == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (ptr);
+	}
+	aux = malloc(len);
+	ft_memcpy(aux, ptr, len);
+	free(ptr);
+	ptr = malloc(len);
+	ft_memcpy(ptr, aux, len);
+	free(aux);
+	return (ptr);
 }
