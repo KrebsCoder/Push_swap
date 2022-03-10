@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/09 21:08:16 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 02:50:28 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ int	*shift(int array[], int len)
 	int	*aux_array;
 	int	i;
 
-	aux_array = malloc(sizeof(int) * len);
+	aux_array = malloc(len * sizeof(int));
 	ft_arraycpy(aux_array, array, len);
 	free(array);
-	array = malloc(sizeof(int) * (len - 1));
+	array = malloc((len - 1) * sizeof(int));
 	i = 0;
 	while (i < len)
 	{
