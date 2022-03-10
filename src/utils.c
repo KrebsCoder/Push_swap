@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/09 03:38:46 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/09 21:08:16 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,33 +29,21 @@ int	ft_strdigit(char *str)
 	return (TRUE);
 }
 
-int	is_max_int(char *str)
+int	check_int(char *str)
 {
 	long	atoi;
 
 	atoi = ft_atoi(str);
-	if (atoi > MAXINT)
+	if (atoi > MAXINT || atoi < MININT)
 		return (FALSE);
 	return (TRUE);
 }
 
-int	array_len(int array[])
-{
-	int	i;
-
-	i = 0;
-	while (array[i])
-		i++;
-	return (i);
-}
-
-int	*shift(int array[])
+int	*shift(int array[], int len)
 {
 	int	*aux_array;
 	int	i;
-	int	len;
 
-	len = array_len(array);
 	aux_array = malloc(sizeof(int) * len);
 	ft_arraycpy(aux_array, array, len);
 	free(array);
@@ -70,7 +58,7 @@ int	*shift(int array[])
 	return (array);
 }
 
-void	*ft_realloc(void *ptr, size_t len)
+void	*ft_realloc(void *ptr, int len)
 {
 	void	*aux;
 
@@ -84,12 +72,12 @@ void	*ft_realloc(void *ptr, size_t len)
 	aux = malloc(len);
 	if (!aux)
 		return (NULL);
-	ft_memcpy(aux, ptr, len);
+	ft_arraycpy(aux, ptr, len);
 	free(ptr);
 	ptr = malloc(len);
 	if (!ptr)
 		return (NULL);
-	ft_memcpy(ptr, aux, len);
+	ft_arraycpy(ptr, aux, len);
 	free(aux);
 	return (ptr);
 }
