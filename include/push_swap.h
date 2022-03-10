@@ -6,17 +6,16 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 15:48:12 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 15:56:20 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include "../libft/libft.h"
 # include <stdlib.h>
 # include <stdio.h>
-
-# include "../libft/libft.h"
 # include <unistd.h>
 
 # define TRUE 1
@@ -131,9 +130,37 @@ int	ft_strdigit(char *str);
  * @return 0 or 1
  */
 int		check_int(char *str);
+
+/**
+ * @brief Removes the first index from an array
+ * @param array to be removed
+ * @param len len of the stack
+ * @return a new array with the first index removed
+ */
 int		*shift(int array[], int len);
+
+/**
+ * @brief Works similarly with realloc function but allocs one extra byte
+ * @param ptr variable to be realloced
+ * @param len len of the stack
+ * @return a new array with one extra byte
+ */
 void	*ft_realloc(void *ptr, size_t len);
+
+/**
+ * @brief This function simulates the radix sorting algorithm
+ * @param data struct to be used
+ * @return 0 or 1
+ */
 int		radix(t_data *data);
+
+/**
+ * @brief checks if argv is valid and initiates the stacks and both its lengths counters
+ * @param data struct to be used
+ * @param argc sends argc to check and init functions
+ * @param argv sends argv to init function
+ * @return 0 or 1
+ */
 int		init_sort(t_data *data, int argc, char *argv[]);
 
 /* temporary */
