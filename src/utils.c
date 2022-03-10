@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/10 02:24:17 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 16:02:09 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	*ft_realloc(void *ptr, size_t len)
 		return (NULL);
 	ft_arraycpy(aux, ptr, len);
 	free(ptr);
-	ptr = malloc((len + 1)* sizeof(int));
+	ptr = malloc((len + 1) * sizeof(int));
 	if (!ptr)
 		return (NULL);
 	ft_arraycpy(ptr, aux, len);
