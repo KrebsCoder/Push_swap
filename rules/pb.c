@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:24:31 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 02:23:04 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/10 03:28:50 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	pb(t_data *data)
 	int	*aux_array;
 	int	i;
 
-	printf("len a:%d len b: %d", data->len_a, data->len_b);
 	aux_array = malloc(data->len_b * sizeof(int));
 	if ((data->len_b * sizeof(int)) != 0)
 	{
