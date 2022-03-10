@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 20:04:31 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/11 00:24:05 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,19 +84,19 @@ void	ss(t_data *data);
  * @brief (reverse rotate a): Shift down all elements of stack a by 1.
 The last element becomes the first one.
  */
-void	rra(void);
+void	rra(t_data *data);
 
 /**
  * @brief (reverse rotate b): Shift down all elements of stack b by 1.
 The last element becomes the first one.
 
  */
-void	rrb(void);
+void	rrb(t_data *data);
 
 /**
  * @brief rra and rrb at the same time.
  */
-void	rrr(void);
+void	rrr(t_data *data);
 
 /* functions */
 
