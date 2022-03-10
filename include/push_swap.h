@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 15:56:20 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 20:04:31 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,18 @@ void	pb(t_data *data);
  * @brief (rotate a) Shift up all elements of stack a by 1.
 The first element becomes the last one.
  */
-void	ra(void);
+void	ra(t_data *data);
 
 /**
  * @brief (rotate b) Shift up all elements of stack b by 1.
 The first element becomes the last one.
  */
-void	rb(void);
+void	rb(t_data *data);
 
 /**
  * @brief ra and rb at the same time.
  */
-void	rr(void);
+void	rr(t_data *data);
 
 /**
  * @brief Swap the first 2 elements at the top of stack a.
