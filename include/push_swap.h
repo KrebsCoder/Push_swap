@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/09 21:08:35 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 00:06:14 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ int	ft_strdigit(char *str);
  */
 int		check_int(char *str);
 int		*shift(int array[], int len);
-void	*ft_realloc(void *ptr, int len);
+void	*ft_realloc(void *ptr, size_t len);
 int		radix(t_data *data);
 int		init_sort(t_data *data, int argc, char *argv[]);
 
