@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/10 02:50:28 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/10 03:12:39 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	*shift(int array[], int len)
 	free(array);
 	array = malloc((len - 1) * sizeof(int));
 	i = 0;
-	while (i < len)
+	while (i < len - 1)
 	{
 		array[i] = aux_array[i + 1];
 		i++;
