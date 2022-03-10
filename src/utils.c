@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/10 03:12:39 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/10 03:54:51 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	*ft_realloc(void *ptr, int len)
 {
 	void	*aux;
 
+	printf("len: %d\n", len);
 	if (!ptr)
 		return (malloc(len));
 	if (len == 0 && ptr != NULL)
