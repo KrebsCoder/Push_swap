@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:24:31 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/09 21:51:22 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 02:23:04 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	pb(t_data *data)
 
 	printf("len a:%d len b: %d", data->len_a, data->len_b);
 	aux_array = malloc(data->len_b * sizeof(int));
-	if (aux_array)
+	if ((data->len_b * sizeof(int)) != 0)
 	{
 		ft_arraycpy(aux_array, data->stack_b, data->len_b);
 		data->stack_b = ft_realloc(data->stack_b, (sizeof(int) * (data->len_b + 1)));
@@ -31,10 +31,11 @@ void	pb(t_data *data)
 			i++;
 		}
 	}
-	data->stack_b[0] = data->stack_a[0];
+	else
+		data->stack_b[0] = data->stack_a[0];
+	data->stack_a = shift(data->stack_a, data->len_a);
 	data->len_a--;
 	data->len_b++;
-	data->stack_a = shift(data->stack_a, data->len_a);
 	write(1, "pb\n", 3);
 	free(aux_array);
 }
