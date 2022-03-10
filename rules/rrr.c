@@ -6,13 +6,14 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:25:51 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/02/26 16:25:56 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/11 00:27:51 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	rrr(void)
+void	rrr(t_data *data)
 {
-
+	rra(data);
+	rrb(data);
 }
