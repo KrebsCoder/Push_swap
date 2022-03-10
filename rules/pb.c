@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:24:31 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 02:30:43 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 15:45:52 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	pb(t_data *data)
 	int	*aux_array;
 	int	i;
 
-	// if stack is empty, return ;
 	if (!data->stack_a[0])
 		return ;
 	aux_array = malloc(data->len_b * sizeof(int));
@@ -27,7 +26,6 @@ void	pb(t_data *data)
 		data->stack_b = ft_realloc(data->stack_b, data->len_b);
 		data->stack_b[0] = data->stack_a[0];
 		i = 0;
-		//printf("data->len_b = %d\n", data->len_b);
 		while (i < data->len_b)
 		{
 			data->stack_b[i + 1] = aux_array[i];
