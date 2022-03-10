@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:26:08 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/09 21:11:19 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/09 21:26:03 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	sb(t_data *data)
 {
 	int	temp;
-	int	len;
 
 	if (data->len_b <= 1)
 		return ;
