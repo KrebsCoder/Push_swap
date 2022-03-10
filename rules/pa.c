@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:19 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 03:40:52 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/10 02:31:01 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ void	pa(t_data *data)
 	int	*aux_array;
 	int	i;
 
+	if (!data->stack_b[0])
+		return ;
 	aux_array = malloc(data->len_a * sizeof(int));
 	if ((data->len_a * sizeof(int)) != 0)
 	{
 		ft_arraycpy(aux_array, data->stack_a, data->len_a);
-		data->stack_a = ft_realloc(data->stack_a, (sizeof(int) * (data->len_a + 1)));
+		data->stack_a = ft_realloc(data->stack_a, data->len_a);
 		data->stack_a[0] = data->stack_b[0];
 		i = 0;
 		while (i < data->len_a)
