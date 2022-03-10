@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 23:47:33 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/04 19:18:59 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/09 21:24:12 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	check(int argc, char *argv[])
 	i = 1;
 	while (argv[i])
 	{
-		if (!ft_strdigit(argv[i]) || !is_max_int(argv[i]))
+		if (!ft_strdigit(argv[i]) || !check_int(argv[i]))
 		{
 			write(2, "Error\n", 6);
 			return (FALSE);
