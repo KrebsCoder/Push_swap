@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:04:07 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/09 21:34:38 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 03:27:34 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	print_stack(int argc, int array[])
 {
-	for (int i = 0; i < argc - 1; i++)
+	for (int i = 0; i < argc; i++)
 		printf("%d\n", array[i]);
-	printf("_\n");
-	printf("x\n");
+	printf("-\n");
+	printf("x\n\n");
 }
 
 
