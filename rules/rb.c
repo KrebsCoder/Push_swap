@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:25:11 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 20:03:09 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/11 00:25:23 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	rb(t_data *data)
 		i++;
 	}
 	data->stack_b[data->len_b - 1] = aux;
+	write(1, "rb\n", 4);
 }
