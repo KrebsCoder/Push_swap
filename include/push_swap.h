@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/09 20:22:00 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/09 21:08:35 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ typedef struct s_data
 {
 	int	*stack_a;
 	int	*stack_b;
+	int	len_a;
+	int	len_b;
 	int	qnt_int;
 } t_data;
 
@@ -37,7 +39,7 @@ typedef struct s_data
  * @brief Take the first element at the top of b and put it at the top of a.
 Do nothing if b is empty
  */
-void	pa(void);
+void	pa(t_data *data);
 
 /**
  * @brief Take the first element at the top of a and put it at the top of b.
@@ -128,20 +130,13 @@ int	ft_strdigit(char *str);
  * @param str Is converted to int with ft_atoi and checked if is above max int
  * @return 0 or 1
  */
-int	is_max_int(char *str);
-
-/**
- * @brief This functions counts the length of an array
- * @param array array to be counted
- * @return a int with the length of an array
- */
-int		array_len(int array[]);
-int		*shift(int array[]);
-void	*ft_realloc(void *ptr, size_t len);
+int		check_int(char *str);
+int		*shift(int array[], int len);
+void	*ft_realloc(void *ptr, int len);
 int		radix(t_data *data);
 int		init_sort(t_data *data, int argc, char *argv[]);
 
 /* temporary */
-void	print_stack(int argc, t_data *data);
+void	print_stack(int argc, int array[]);
 
 #endif
