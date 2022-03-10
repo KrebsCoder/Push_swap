@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 00:06:14 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/10 15:48:12 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	sb(t_data *data);
 /**
  * @brief sa and sb at the same time.
  */
-void	ss(void);
+void	ss(t_data *data);
 
 /**
  * @brief (reverse rotate a): Shift down all elements of stack a by 1.

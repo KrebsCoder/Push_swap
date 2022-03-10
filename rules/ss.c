@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:26:00 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/02/26 16:26:03 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/10 15:47:53 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ss(void)
+void	ss(t_data *data)
 {
-
+	sa(data);
+	sb(data);
 }
