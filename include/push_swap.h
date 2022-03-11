@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/11 00:24:05 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/10 21:23:54 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_data
 	int	len_a;
 	int	len_b;
 	int	qnt_int;
-} t_data;
+}	t_data;
 
 /* ==== rules functions ==== */
 
@@ -106,7 +106,7 @@ void	rrr(t_data *data);
  * @param argv is checked if values are valid
  * @return 0 or 1
  */
-int	check(int argc, char *argv[]);
+int		check(int argc, char *argv[]);
 
 /**
  * @brief Iniciates the stack a
@@ -115,14 +115,14 @@ int	check(int argc, char *argv[]);
  * @param argv Is used to convert string to int using ft_atoi
  * @return 0 or 1
  */
-int	init(t_data *data, int argc, char *argv[]);
+int		init(t_data *data, int argc, char *argv[]);
 
 /**
  * @brief Checks if str is valid
  * @param str Is used to check if str if between 0 and 9 and if is negative
  * @return 0 or 1
  */
-int	ft_strdigit(char *str);
+int		ft_strdigit(char *str);
 
 /**
  * @brief Checks if the numbers are above the max int
@@ -155,7 +155,8 @@ void	*ft_realloc(void *ptr, size_t len);
 int		radix(t_data *data);
 
 /**
- * @brief checks if argv is valid and initiates the stacks and both its lengths counters
+ * @brief checks if argv is valid and initiates the stacks and both its
+ * length counters
  * @param data struct to be used
  * @param argc sends argc to check and init functions
  * @param argv sends argv to init function
