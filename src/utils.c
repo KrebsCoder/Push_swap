@@ -3,41 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/10 16:02:09 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/11 23:47:37 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-int	ft_strdigit(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!(str[i] >= '0' && str[i] <= '9'))
-		{
-			return (FALSE);
-			break ;
-		}
-		i++;
-	}
-	return (TRUE);
-}
-
-int	check_int(char *str)
-{
-	long	atoi;
-
-	atoi = ft_atoi(str);
-	if (atoi > MAXINT || atoi < MININT)
-		return (FALSE);
-	return (TRUE);
-}
 
 int	*shift(int array[], int len)
 {

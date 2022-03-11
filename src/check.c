@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 23:47:33 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/09 21:24:12 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/11 23:47:45 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,32 @@ int	check(int argc, char *argv[])
 		}
 		i++;
 	}
+	return (TRUE);
+}
+
+int	ft_strdigit(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= '0' && str[i] <= '9') && str[i] != '-')
+		{
+			return (FALSE);
+			break ;
+		}
+		i++;
+	}
+	return (TRUE);
+}
+
+int	check_int(char *str)
+{
+	long	atoi;
+
+	atoi = ft_atoi(str);
+	if (atoi > MAXINT || atoi < MININT)
+		return (FALSE);
 	return (TRUE);
 }
