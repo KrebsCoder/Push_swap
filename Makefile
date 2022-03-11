@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/26 16:58:00 by gcosta-d          #+#    #+#              #
-#    Updated: 2022/03/08 02:55:32 by lkrebs-l         ###   ########.fr        #
+#    Updated: 2022/03/11 01:27:36 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC_FILES = check.c \
 			main.c \
 			radix.c \
 			init_sort.c \
-			utils.c 
+			utils.c
 SRC = $(addprefix $(SRC_PATH),$(SRC_FILES))
 
 OBJ_PATH = ./objs/
@@ -44,25 +44,25 @@ $(OBJ_PATH)%.o: $(RULES_PATH)%.c
 all: $(NAME)
 
 $(NAME): $(OBJ_PATH) $(SRC_OBJ) $(RULES_OBJ)
+	@echo " 100% complete"
+	@echo -n "libft     : "
 	@$(MAKE) --no-print-directory -C ./libft
 	@$(CC) $(FLAGS) $(SRC_OBJ) $(RULES_OBJ) ./libft/libft.a -o $(NAME)
-	@echo -n █
-	@echo " 100% complete"
 
 $(OBJ_PATH):
-	@echo -n "build  : "
+	@echo -n "push_swap : "
 	@mkdir -p objs
 	@echo -n █
 
 clean:
-	@echo -n "clean  : "
+	@echo -n "clean     : "
 	@$(MAKE) --no-print-directory -C ./libft clean
 	@rm -f $(SRC_OBJ) $(RULES_OBJ)
 	@echo -n █
 	@echo " 100% complete"
 
 fclean: clean
-	@echo -n "fclean : "
+	@echo -n "fclean    : "
 	@$(MAKE) --no-print-directory -C ./libft fclean
 	@rm -rf $(OBJ_PATH)
 	@rm -rf $(NAME)
