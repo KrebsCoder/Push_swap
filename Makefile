@@ -6,7 +6,7 @@
 #    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/26 16:58:00 by gcosta-d          #+#    #+#              #
-#    Updated: 2022/03/11 01:27:36 by gcosta-d         ###   ########.fr        #
+#    Updated: 2022/03/11 23:40:18 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,9 +24,11 @@ SRC_PATH = ./src/
 SRC_FILES = check.c \
 			init.c \
 			main.c \
+			normalize.c \
 			radix.c \
 			init_sort.c \
 			utils.c
+
 SRC = $(addprefix $(SRC_PATH),$(SRC_FILES))
 
 OBJ_PATH = ./objs/
