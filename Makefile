@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/26 16:58:00 by gcosta-d          #+#    #+#              #
-#    Updated: 2022/03/11 23:40:18 by gcosta-d         ###   ########.fr        #
+#    Updated: 2022/03/12 11:26:09 by lkrebs-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,13 @@ RULES = $(addprefix $(RULES_PATH),$(RULES_FILES))
 
 SRC_PATH = ./src/
 SRC_FILES = check.c \
+			free.c \
+			init_sort.c \
 			init.c \
 			main.c \
 			normalize.c \
 			radix.c \
-			init_sort.c \
+			small_sort.c \
 			utils.c
 
 SRC = $(addprefix $(SRC_PATH),$(SRC_FILES))
