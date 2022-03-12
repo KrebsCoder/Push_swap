@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   normalize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:34:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/12 02:31:39 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/12 00:33:42 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	normalize(t_data *data)
 {
 	int	i;
 	int	j;
+	int	*aux_stack;
 
+	aux_stack = malloc(data->len_a * sizeof(int));
+	ft_arraycpy(aux_stack, data->stack_a, data->len_a);
 	bubble_sort(data);
 	i = 0;
 	while (i < data->len_a)
@@ -24,8 +27,11 @@ void	normalize(t_data *data)
 		j = 0;
 		while (j < data->len_a)
 		{
-			if (data->copy_stack[i] == data->stack_a[j])
+			if (data->copy_stack[i] == aux_stack[j])
+			{
 				data->stack_a[j] = i;
+				break ;
+			}
 			j++;
 		}
 		i++;
