@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:34:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/12 00:33:42 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/12 00:38:02 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	normalize(t_data *data)
 void	bubble_sort(t_data *data)
 {
 	int	i;
-	int j;
+	int	j;
 	int	aux;
 
 	data->copy_stack = malloc(data->len_a * sizeof(int));
