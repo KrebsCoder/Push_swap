@@ -3,14 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   normalize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:34:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/11 22:05:13 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/12 02:31:39 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	normalize(t_data *data)
+{
+	int	i;
+	int	j;
+
+	bubble_sort(data);
+	i = 0;
+	while (i < data->len_a)
+	{
+		j = 0;
+		while (j < data->len_a)
+		{
+			if (data->copy_stack[i] == data->stack_a[j])
+				data->stack_a[j] = i;
+			j++;
+		}
+		i++;
+	}
+}
 
 void	bubble_sort(t_data *data)
 {
@@ -24,14 +44,10 @@ void	bubble_sort(t_data *data)
 	while (i < data->len_a)
 	{
 		j = 0;
-		printf("outer loop = %d\n", i);
-		print_stack(data->len_a, data->copy_stack);
 		while (j < data->len_a - 1)
 		{
 			if (data->copy_stack[j] > data->copy_stack[j + 1])
 			{
-				printf("j: %d\n", data->copy_stack[j]);
-				printf("j + 1: %d\n", data->copy_stack[j + 1]);
 				aux = data->copy_stack[j];
 				data->copy_stack[j] = data->copy_stack[j + 1];
 				data->copy_stack[j + 1] = aux;
