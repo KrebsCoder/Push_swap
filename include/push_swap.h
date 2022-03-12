@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/12 02:14:12 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/11 23:34:28 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,7 +167,7 @@ int		init_sort(t_data *data, int argc, char *argv[]);
 
 void	bubble_sort(t_data *data);
 void	normalize(t_data *data);
-
+int		check_duplicate(t_data *data);
 /* temporary */
 void	print_stack(int argc, int array[]);
 
