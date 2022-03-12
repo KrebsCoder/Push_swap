@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:36:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/10 03:06:35 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/12 02:29:44 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	init_sort(t_data *data, int argc, char *argv[])
 		return (EXIT_FAILURE);
 	if (argc >= 6)
 		return (radix(data));
+	radix(data);
 	return (EXIT_SUCCESS);
 }
