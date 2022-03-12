@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/11 23:38:12 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/11 22:05:31 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_data
 	int	len_a;
 	int	len_b;
 	int	qnt_int;
+	int	*copy_stack;
 }	t_data;
 
 /* ==== rules functions ==== */
@@ -164,7 +165,7 @@ int		radix(t_data *data);
  */
 int		init_sort(t_data *data, int argc, char *argv[]);
 
-void	normalize(t_data *data);
+void	bubble_sort(t_data *data);
 
 /* temporary */
 void	print_stack(int argc, int array[]);
