@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:27:30 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/12 11:08:02 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/14 03:15:53 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	radix(t_data *data)
 {
 	printf("antes: \n");
 	print_stack(data->len_a, data->stack_a);
-	normalize(data);
 	printf("\n\ndepois: \n");
 	print_stack(data->len_a, data->stack_a);
 	ft_free(data);
