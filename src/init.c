@@ -3,34 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:37:26 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/11 23:42:49 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/14 03:06:18 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-int	check_duplicate(t_data *data)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < data->len_a)
-	{
-		j = i + 1;
-		while (j < data->len_a)
-		{
-			if (data->stack_a[i] == data->stack_a[j])
-				return (TRUE);
-			j++;
-		}
-		i++;
-	}
-	return (FALSE);
-}
 
 int	init(t_data *data, int argc, char *argv[])
 {
@@ -54,4 +34,24 @@ int	init(t_data *data, int argc, char *argv[])
 		return (FALSE);
 	}
 	return (TRUE);
+}
+
+int	check_duplicate(t_data *data)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < data->len_a)
+	{
+		j = i + 1;
+		while (j < data->len_a)
+		{
+			if (data->stack_a[i] == data->stack_a[j])
+				return (TRUE);
+			j++;
+		}
+		i++;
+	}
+	return (FALSE);
 }
