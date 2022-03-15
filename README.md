@@ -13,7 +13,7 @@
 		<a href="https://www.linkedin.com/in/gabriela-sertori-50b390189/">
 			<img alt="Gabriela linkedin" src="https://img.shields.io/badge/-gabisertori-blue?style=flat&logo=Linkedin&logoColor=white" />
 		</a>
-		<a href="https://www.linkedin.com/in/lucas-l-a555bb199/">
+		<a href="https://www.linkedin.com/in/lucas-k-a555bb199/">
 			<img alt="Lucas linkedin" src="https://img.shields.io/badge/-krebscoder-blue?style=flat&logo=Linkedin&logoColor=white" />
 		</a>
 	</div>
