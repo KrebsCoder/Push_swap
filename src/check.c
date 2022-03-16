@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 23:47:33 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/12 00:38:14 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/16 02:21:40 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
+/* Quando passamos um numero no cli ele retorna 1 no echo $? */
 int	check(int argc, char *argv[])
 {
 	int	i;
