@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:37:26 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/14 03:06:18 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/16 02:25:46 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	init(t_data *data, int argc, char *argv[])
 		write(2, "Error\n", 6);
 		return (FALSE);
 	}
+	// else if (is_sorted(data))
 	return (TRUE);
 }
 
