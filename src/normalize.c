@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   normalize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:34:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/12 00:38:02 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/16 03:53:11 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	normalize(t_data *data)
 		{
 			if (data->copy_stack[i] == aux_stack[j])
 			{
-				data->stack_a[j] = i;
+				data->stack_a[j] = i + 1;
 				break ;
 			}
 			j++;
