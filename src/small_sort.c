@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 10:44:05 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/16 23:35:10 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/16 23:40:41 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int	small_sort_5(t_data *data)
 	small_sort_3(data, 3, 4, 5);
 	pa(data);
 	pa(data);
-	ft_free(data);
 	return (EXIT_SUCCESS);
 }
 
