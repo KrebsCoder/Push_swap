@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:36:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/16 23:31:33 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/16 23:40:32 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	init_sort(t_data *data, int argc, char *argv[])
 {
 	int	exit;
+
 	if (!check(argc, argv) || !init(data, argc, argv))
 		return (EXIT_FAILURE);
 	else
@@ -26,7 +27,11 @@ int	init_sort(t_data *data, int argc, char *argv[])
 		return (exit);
 	}
 	else if (data->len_a <= 5)
-		return (small_sort_5(data));
+	{
+		exit = small_sort_5(data);
+		ft_free(data);
+		return (exit);
+	}
 	else
 		return (radix(data));
 }
