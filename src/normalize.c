@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 23:34:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/16 23:32:34 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/17 16:39:53 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	normalize(t_data *data)
 		i++;
 	}
 	free(aux_stack);
+	free(data->copy_stack);
 }
 
 void	bubble_sort(t_data *data)
