@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:36:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/16 23:43:22 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/17 16:30:11 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	init_sort(t_data *data, int argc, char *argv[])
 {
 	int	exit;
 
-	if (!check(argc, argv) || !init(data, argc, argv))
+	if (!init(data, argc, argv) || !check(data, argc, argv))
 		return (EXIT_FAILURE);
 	else
 		normalize(data);
