@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/16 22:34:28 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/17 17:41:23 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void	rrr(t_data *data);
  * @param argv is checked if values are valid
  * @return 0 or 1
  */
-int		check(int argc, char *argv[]);
+int		check(t_data *data, int argc, char *argv[]);
 
 /**
  * @brief Iniciates the stack a
@@ -171,6 +171,7 @@ int		check_duplicate(t_data *data);
 void	ft_free(t_data *data);
 int		small_sort_3(t_data *data,  int first, int mid, int last);
 int		small_sort_5(t_data *data);
+int		is_sorted(t_data *data);
 /* temporary */
 void	print_stack(int argc, int array[]);
 
