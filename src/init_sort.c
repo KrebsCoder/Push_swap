@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:36:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/14 03:35:56 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/16 22:34:09 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	init_sort(t_data *data, int argc, char *argv[])
 	else
 		normalize(data);
 	if (data->len_a <= 3)
-		return (small_sort_3(data));
+		return (small_sort_3(data, 1, 2, 3));
 	else if (data->len_a <= 5)
 		return (small_sort_5(data));
 	else
