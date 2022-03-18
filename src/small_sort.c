@@ -6,17 +6,17 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 10:44:05 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/18 02:37:03 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/18 03:09:37 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
 static int	find_min_int(t_data *data);
-static	void push_b(t_data *data, int index, int mid_index, int last_index);
-static	void sort_b(t_data *data);
+static void	push_b(t_data *data, int index, int mid_index, int last_index);
+static void	sort_b(t_data *data);
 
-int	small_sort_3(t_data *data,  int first, int mid, int last)
+int	small_sort_3(t_data *data, int first, int mid, int last)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	small_sort_3(t_data *data,  int first, int mid, int last)
 		if (data->stack_a[0] == first && data->stack_a[1] == mid)
 			return (EXIT_SUCCESS);
 		else if (data->stack_a[0] == last || (data->stack_a[0] == mid
-			&& data->stack_a [1] == last))
+				&& data->stack_a [1] == last))
 			ra(data);
 		else
 			sa(data);
@@ -59,9 +59,6 @@ int	small_sort_5(t_data *data)
 	small_sort_3(data, 3, 4, 5);
 	while (data->len_b > 0)
 		pa(data);
-	// pa(data);
-	// if (data->len_b == 1)
-	// 	pa(data);
 	return (EXIT_SUCCESS);
 }
 
@@ -81,7 +78,7 @@ static int	find_min_int(t_data *data)
 	return (index);
 }
 
-static	void push_b(t_data *data, int index, int mid_index, int last_index)
+static void	push_b(t_data *data, int index, int mid_index, int last_index)
 {
 	int	i;
 
@@ -107,7 +104,7 @@ static	void push_b(t_data *data, int index, int mid_index, int last_index)
 	pb(data);
 }
 
-static	void sort_b(t_data *data)
+static void	sort_b(t_data *data)
 {
 	if (data->len_b > 1 && data->stack_b[0] < data->stack_b[1])
 		sb(data);
