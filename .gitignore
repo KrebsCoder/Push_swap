@@ -4,3 +4,5 @@
 *.a
 push_swap
 testemesa.txt
+push_swap_tester
+push_swap_visualizer
