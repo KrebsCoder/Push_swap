@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:04:07 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/14 04:27:46 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/18 03:06:50 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	print_stack(int argc, int array[])
 	printf("-\n");
 	printf("q\n\n");
 }
-
 
 int	main(int argc, char *argv[])
 {
