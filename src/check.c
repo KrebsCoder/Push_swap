@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 23:47:33 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/18 02:58:54 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/18 17:58:45 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	check(t_data *data, int argc, char *argv[])
 		write(2, "Error\n", 6);
 		return (FALSE);
 	}
-	if (!check_int(data, argc, argv) && check_duplicate(data))
+	if (!check_int(data, argc, argv) || check_duplicate(data))
 	{
 		write(2, "Error\n", 6);
 		ft_free(data);
@@ -117,11 +117,3 @@ int	is_sorted(t_data *data)
 	}
 	return (TRUE);
 }
-/*
-	i = 0;
-	while (i < argc)
-	{
-		data->stack_a[i] = ft_atoi(argv[i + 1]);
-		i++;
-	}
-*/
