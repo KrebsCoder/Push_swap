@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:27:30 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/18 02:36:49 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/18 03:08:59 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ int	radix(t_data *data)
 	int	j;
 	int	len;
 	int	first_int;
-
-	printf("antes: \n");
-	print_stack(data->len_a, data->stack_a);
 
 	len = data->len_a;
 	i = 0;
@@ -40,7 +37,5 @@ int	radix(t_data *data)
 			pa(data);
 		i++;
 	}
-	printf("\n\ndepois: \n");
-	print_stack(data->len_a, data->stack_a);
 	return (EXIT_SUCCESS);
 }
