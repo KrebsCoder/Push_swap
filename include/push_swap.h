@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/17 17:41:23 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/18 02:52:02 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,21 +116,21 @@ int		check(t_data *data, int argc, char *argv[]);
  * @param argv Is used to convert string to int using ft_atoi
  * @return 0 or 1
  */
-int		init(t_data *data, int argc, char *argv[]);
+int		init(t_data *data, int argc);
 
 /**
  * @brief Checks if str is valid
  * @param str Is used to check if str if between 0 and 9 and if is negative
  * @return 0 or 1
  */
-int		ft_strdigit(char *str);
+int		ft_strdigit(char *argv[]);
 
 /**
  * @brief Checks if the numbers are above the max int
  * @param str Is converted to int with ft_atoi and checked if is above max int
  * @return 0 or 1
  */
-int		check_int(char *str);
+int		check_int(t_data *data, int argc, char *argv[]);
 
 /**
  * @brief Removes the first index from an array
