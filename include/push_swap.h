@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/18 02:52:02 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/18 03:06:35 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,7 +169,7 @@ void	bubble_sort(t_data *data);
 void	normalize(t_data *data);
 int		check_duplicate(t_data *data);
 void	ft_free(t_data *data);
-int		small_sort_3(t_data *data,  int first, int mid, int last);
+int		small_sort_3(t_data *data, int first, int mid, int last);
 int		small_sort_5(t_data *data);
 int		is_sorted(t_data *data);
 /* temporary */
