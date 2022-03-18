@@ -3,32 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 23:47:33 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/17 17:41:12 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/18 02:58:54 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-/* Quando passamos um numero no cli ele retorna 1 no echo $? */
+/* Quando passamos apenas um numero no cli ele retorna 1 no echo $? */
 int	check(t_data *data, int argc, char *argv[])
 {
-	int	i;
-
 	if (argc < 3)
 		return (FALSE);
-	i = 0;
-	while (argv[++i])
+	if (!ft_strdigit(argv))
 	{
-		if (!ft_strdigit(argv[i]) || !check_int(argv[i]))
-		{
-			write(2, "Error\n", 6);
-			return (FALSE);
-		}
+		write(2, "Error\n", 6);
+		return (FALSE);
 	}
-	if (check_duplicate(data))
+	if (!check_int(data, argc, argv) && check_duplicate(data))
 	{
 		write(2, "Error\n", 6);
 		ft_free(data);
@@ -42,30 +36,43 @@ int	check(t_data *data, int argc, char *argv[])
 	return (TRUE);
 }
 
-int	ft_strdigit(char *str)
+int	ft_strdigit(char *argv[])
 {
 	int	i;
+	int	j;
 
-	i = 0;
-	while (str[i] != '\0')
+	i = 1;
+	while (argv[i])
 	{
-		if (!(str[i] >= '0' && str[i] <= '9') && str[i] != '-')
+		j = 0;
+		while (argv[i][j] != '\0')
 		{
-			return (FALSE);
-			break ;
+			if (!(argv[i][j] >= '0' && argv[i][j] <= '9') && argv[i][j] != '-')
+			{
+				return (FALSE);
+				break ;
+			}
+			j++;
 		}
 		i++;
 	}
 	return (TRUE);
 }
 
-int	check_int(char *str)
+int	check_int(t_data *data, int argc, char *argv[])
 {
 	long	atoi;
+	int		i;
 
-	atoi = ft_atoi(str);
-	if (atoi > MAXINT || atoi < MININT)
-		return (FALSE);
+	i = 0;
+	while (i < argc)
+	{
+		atoi = ft_atoi(argv[i + 1]);
+		if (atoi > MAXINT || atoi < MININT)
+			return (FALSE);
+		data->stack_a[i] = atoi;
+		i++;
+	}
 	return (TRUE);
 }
 
@@ -92,22 +99,29 @@ int	check_duplicate(t_data *data)
 int	is_sorted(t_data *data)
 {
 	int	i;
-	int	j;
-	int	aux;
+	int	next;
+	int	current;
 
 	i = 0;
 	while (i < data->len_a)
 	{
-		aux = data->stack_a[i];
-		j = i + 1;
-		while (j < data->len_a)
+		current = data->stack_a[i];
+		next = i + 1;
+		while (next < data->len_a)
 		{
-			if (data->stack_a[j] < aux)
+			if (data->stack_a[next] < current)
 				return (FALSE);
-			j++;
+			next++;
 		}
 		i++;
 	}
 	return (TRUE);
 }
-
+/*
+	i = 0;
+	while (i < argc)
+	{
+		data->stack_a[i] = ft_atoi(argv[i + 1]);
+		i++;
+	}
+*/
