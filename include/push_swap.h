@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/18 18:11:17 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/19 03:16:14 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "../libft/libft.h"
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
 
 # define TRUE 1
@@ -25,12 +24,11 @@
 
 typedef struct s_data
 {
+	int	*copy_stack;
 	int	*stack_a;
 	int	*stack_b;
 	int	len_a;
 	int	len_b;
-	int	qnt_int;
-	int	*copy_stack;
 }	t_data;
 
 /* ==== rules functions ==== */
@@ -172,7 +170,5 @@ void	ft_free(t_data *data);
 int		small_sort_3(t_data *data, int first, int mid, int last);
 int		small_sort_5(t_data *data);
 int		is_sorted(t_data *data);
-/* temporary */
-void	print_stack(int argc, int array[]);
 
 #endif
