@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:12:16 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/11 23:47:37 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/19 03:11:09 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int	*shift(int array[], int len)
 	aux_array = malloc(len * sizeof(int));
 	ft_arraycpy(aux_array, array, len);
 	free(array);
-	array = malloc((len - 1) * sizeof(int));
+	if (len > 1)
+		array = malloc((len - 1) * sizeof(int));
+	else
+		array = malloc((len) * sizeof(int));
 	i = 0;
 	while (i < len - 1)
 	{
