@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 23:47:33 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/18 17:58:45 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/18 23:37:07 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* Quando passamos apenas um numero no cli ele retorna 1 no echo $? */
 int	check(t_data *data, int argc, char *argv[])
 {
-	if (argc < 3)
+	if (argc < 2)
 		return (FALSE);
 	if (!ft_strdigit(argv))
 	{
@@ -25,14 +25,10 @@ int	check(t_data *data, int argc, char *argv[])
 	if (!check_int(data, argc, argv) || check_duplicate(data))
 	{
 		write(2, "Error\n", 6);
-		ft_free(data);
 		return (FALSE);
 	}
 	else if (is_sorted(data))
-	{
-		ft_free(data);
 		return (FALSE);
-	}
 	return (TRUE);
 }
 
