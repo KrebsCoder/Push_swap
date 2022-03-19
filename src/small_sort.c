@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 10:44:05 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/18 18:11:13 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/18 23:25:50 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static int	find_min_int(t_data *data);
 static void	push_b(t_data *data, int index, int mid_index, int last_index);
-static void	sort_b(t_data *data);
 
 int	small_sort_3(t_data *data, int first, int mid, int last)
 {
@@ -55,7 +54,8 @@ int	small_sort_5(t_data *data)
 		i++;
 		len--;
 	}
-	sort_b(data);
+	if (data->len_b > 1 && data->stack_b[0] < data->stack_b[1])
+		sb(data);
 	small_sort_3(data, 3, 4, 5);
 	while (data->len_b > 0)
 		pa(data);
@@ -102,10 +102,4 @@ static void	push_b(t_data *data, int index, int mid_index, int last_index)
 		i++;
 	}
 	pb(data);
-}
-
-static void	sort_b(t_data *data)
-{
-	if (data->len_b > 1 && data->stack_b[0] < data->stack_b[1])
-		sb(data);
 }
