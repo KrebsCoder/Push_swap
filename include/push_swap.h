@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:23:58 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/19 03:16:14 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/19 04:06:56 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,12 +163,54 @@ int		radix(t_data *data);
  */
 int		init_sort(t_data *data, int argc, char *argv[]);
 
+/**
+ * @brief compare current integer with next integer in an array
+ * @param data struct to be used
+ */
 void	bubble_sort(t_data *data);
+
+/**
+ * @brief transform negative integers into positives values in an array,
+ * balancing alredy positives numbers
+ * @param data struct to be used
+ */
 void	normalize(t_data *data);
+
+/**
+ * @brief checks if array has duplicate numbers
+ * @param data struct to be used
+ * @return 0 or 1
+ */
 int		check_duplicate(t_data *data);
+
+/**
+ * @brief free stacks
+ * @param data struct to be used
+ */
 void	ft_free(t_data *data);
+
+/**
+ * @brief sort array of 3
+ * @param data struct to be used
+ * @param first first value
+ * @param mid middle value
+ * @param last last value
+ * @return 0 or 1
+ */
 int		small_sort_3(t_data *data, int first, int mid, int last);
+
+/**
+ * @brief sort array of 5
+ * @param data struct to be used
+ * @return 0 or 1
+ */
 int		small_sort_5(t_data *data);
+
+/**
+ * @brief checks if an array is already sorted
+ * @param data struct to be used
+ * @return 0 or 1
+ */
 int		is_sorted(t_data *data);
 
 #endif
