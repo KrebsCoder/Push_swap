@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:36:40 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/18 18:11:26 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2022/03/18 23:33:30 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ int	init_sort(t_data *data, int argc, char *argv[])
 	int	exit;
 
 	if (!init(data, argc) || !check(data, argc, argv))
+	{
+		ft_free(data);
 		return (EXIT_FAILURE);
+	}
 	else
 		normalize(data);
 	if (data->len_a <= 3)
