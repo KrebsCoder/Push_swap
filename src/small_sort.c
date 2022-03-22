@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 10:44:05 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2022/03/18 23:25:50 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/21 22:33:43 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ int	small_sort_5(t_data *data)
 	}
 	if (data->len_b > 1 && data->stack_b[0] < data->stack_b[1])
 		sb(data);
-	small_sort_3(data, 3, 4, 5);
+	if (data->len_a + data->len_b == 5)
+		small_sort_3(data, 3, 4, 5);
 	while (data->len_b > 0)
 		pa(data);
 	return (EXIT_SUCCESS);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 02:27:30 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/19 03:12:04 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/21 22:33:59 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	radix(t_data *data)
 	int	i;
 	int	j;
 	int	len;
-	int	first_int;
 
 	len = data->len_a;
 	i = 0;
@@ -26,8 +25,7 @@ int	radix(t_data *data)
 		j = 0;
 		while (j < len && !is_sorted(data))
 		{
-			first_int = data->stack_a[0];
-			if ((first_int >> i) & 1)
+			if ((data->stack_a[0] >> i) & 1)
 				ra(data);
 			else
 				pb(data);
