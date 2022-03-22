@@ -7,7 +7,7 @@
 	<div>
 		<img src="https://img.shields.io/badge/language-C-blue" />
 		<img src="https://img.shields.io/badge/version-1-blue" />
-		<img src="https://img.shields.io/badge/grade-100-green" />
+		<img src="https://img.shields.io/badge/grade-84-green" />
 	</div>
 		<div>
 		<a href="https://www.linkedin.com/in/gabriela-sertori-50b390189/">
