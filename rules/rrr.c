@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 16:25:51 by gcosta-d          #+#    #+#             */
-/*   Updated: 2022/03/11 00:27:51 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2022/03/22 20:24:20 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ void	rrr(t_data *data)
 {
 	rra(data);
 	rrb(data);
+	write(1, "rrr\n", 4);
 }
